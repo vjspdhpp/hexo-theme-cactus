@@ -15,4 +15,9 @@
     <%- page.content %>
   </div>
 </article>
-<%- partial('_partial/comments') %>
+
+<!-- <%- partial('_partial/comments') %> -->
+<% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+  <%- partial('_partial/post/valine') %>
+<% } %>
+

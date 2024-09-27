@@ -15,9 +15,10 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /
-  about: /about/
+  # about: /about/
   articles: /archives/
-  projects: http://github.com/probberechts
+  draft: /draft/
+  links: /links/
 
 
 # Links to your social media accounts.
@@ -29,24 +30,7 @@ nav:
 social_links:
   -
     icon: github
-    link: http://github.com/probberechts/cactus-dark
-  -
-    icon: twitter
-    link: /
-  -
-    icon: facebook
-    link: /
-  -
-    icon: mail
-    link: mailto:name@email.com
-  -
-    icon: mastodon
-    label: mastodon.social
-    link: https://mastodon.social/@alice
-  -
-    icon: mastodon
-    label: fosstodon.org
-    link: https://fosstodon.org/@alice
+    link: http://github.com/chaosgoo
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -58,7 +42,7 @@ tags_overview: false
 #   - post_count: whether to show only the x most recent posts.
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
-  show_all_posts: false
+  show_all_posts: true
   post_count: 5
   sort_updated: false
 
@@ -74,7 +58,9 @@ archive:
 # Options:
 #   - show_updated: show the last modification date.
 post:
-  show_updated: false
+  show_all_posts: ture
+  post_count: 9
+  sort_updated: false
 
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
@@ -88,6 +74,11 @@ copyright:
 error_404:
   enabled: true
   title: "404 Page Not Found"
+  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+
+draft:
+  enabled: true
+  title: "Draft Page"
   description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
 
 
@@ -107,7 +98,7 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: /images/logo.png
+  url: /images/Logo_Sketch.png
   gravatar: false
   grayout: true
 
@@ -122,14 +113,14 @@ logo:
 #   - gravatar: whether to create a favicon from your Gravatar
 favicon:
   desktop:
-    url: /images/favicon.ico
+    url: /images/Logo_sketch_bg_64px.png
     gravatar: false
   android:
-    url: /images/favicon-192x192.png
-    gravatar: false
+    url: /images/Logo_sketch_bg_64px.png
+    gravator: false
   apple:
-    url: /images/apple-touch-icon.png
-    gravatar: false
+    url: /images/Logo_sketch_bg_64px.png
+    gravator: true
 
 # The color scheme that should be used to highlight codeblocks.
 # See source/css/_highlight for a list of all available color schemes.
@@ -138,10 +129,10 @@ favicon:
 # Set the color scheme.
 # Available color schemes are 'dark', 'light', 'classic' and 'white'.
 # Alternatively, add your own custom color scheme to source/css/_colors.
-colorscheme: dark
+colorscheme: light
 
 # Maximal width of the page in rem units.
-page_width: 48
+page_width: 56
 
 
 ##############################################################################
@@ -182,8 +173,8 @@ utterances:
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
-  enabled: false
-  id: UA-86660611-1
+  enabled: true
+  id: UA-107986670-1
 
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
 baidu_analytics:
@@ -206,7 +197,7 @@ umami_analytics:
 # logo and/or favicons of you website.
 # To generate hash: `$ echo -n "name@email.com" | md5`.
 gravatar:
-  email: name@email.com
+  email: admin@chaosgoo.com
   hash: d41d8cd98f00b204e9800998ecf8427e
 
 # loads libraries and styles from CDN instead or relying on local files
